@@ -1,0 +1,25 @@
+{
+  "name": "hackvsit",
+  "version": "1.0.0",
+  "description": "",
+  "main": "imgtotext.js",
+  "dependencies": {
+    "node-summary": "^1.2.0",
+    "pdfkit": "^0.9.0",
+    "tesseract.js": "^1.0.14"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kartikbehl99/HackVSIT.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kartikbehl99/HackVSIT/issues"
+  },
+  "homepage": "https://github.com/kartikbehl99/HackVSIT#readme"
+}

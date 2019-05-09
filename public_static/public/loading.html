@@ -1,0 +1,64 @@
+<html>
+
+<head>
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #2196f3;
+        }
+
+        @-webkit-keyframes rotating {
+            from {
+                -webkit-transform: rotate(0deg);
+            }
+
+            to {
+                -webkit-transform: rotate(360deg);
+            }
+        }
+
+        #preloader {
+            /* position: absolute;
+            left: 50%;
+            top: 50%; */
+            width: 48px;
+            height: 48px;
+            transform: translate(-50%,-50%);
+            border: #e3f2fd 3px solid;
+            border-left-color: transparent;
+            border-radius: 50%;
+            -webkit-animation: rotating 1s linear infinite;
+        }
+
+        #text {
+            /* position: absolute;
+            left: 50%;
+            top: 60%;
+            transform: translate(-50%,-40%); */
+            color: white;
+            font-size: 2em;
+            font-family: 'Montserrat', sans-serif;
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%">
+        <div id="preloader"></div>
+        <p id="text">Please Wait ...</p>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+
+    <script>
+        var socket = io();
+        socket.on('complete', (status) => {
+            window.location.href = './videobook.html';
+        })
+    </script>
+</body>
+
+</html>
